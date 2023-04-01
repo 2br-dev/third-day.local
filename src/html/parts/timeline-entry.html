@@ -1,0 +1,13 @@
+<div class="timeline-entry">
+	<div class="date">@@name</div>
+	@@if(context.prefix){
+		<div class="prefix">@@prefix</div>
+	}
+	@@if(context.parts){
+		<ul class="browser-default">
+		@@for(let i=0; i<parts.length; i++){
+			<li>`+parts[i]+`</li>
+		}
+		</ul>
+	}
+</div>

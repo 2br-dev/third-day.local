@@ -1,0 +1,38 @@
+[
+	{
+		"image": "/img/areas/mirovozzrenie.jpg",
+		"title": "Мировоз&shy;зрение",
+		"description": "управление на высшем приоритете: глобальные тренды тысячелетий",
+		"class": "col xl6 l6 m6 s6"
+	},
+	{
+		"image": "/img/areas/ideology.jpg",
+		"title": "Идеология",
+		"description": "управление на уровне религии денег: тренд в тысячу лет",
+		"class": "col xl6 l6 m6 s6"
+	},
+	{
+		"image": "/img/areas/philosophy.jpg",
+		"title": "Философия",
+		"description": "уровень формирования и представления смыслов",
+		"class": "col xl6 l6 m6 s6"
+	},
+	{
+		"image": "/img/areas/ethics.jpg",
+		"title": "Этика",
+		"description": "уровень мышления, моделей и образов",
+		"class": "col xl6 l6 m6 s6"
+	},
+	{
+		"image": "/img/areas/economics1.jpg",
+		"title": "Экономика",
+		"description": "управление сегодня и завтра: куда летят «черные лебеди»",
+		"class": "col xl6 l6 m6 s6"
+	},
+	{
+		"image": "/img/areas/economics2.jpg",
+		"title": "<i>Экономика</i>",
+		"description": "практическая реализация в деятельности в новой парадигме",
+		"class": "col xl6 l6 m6 s6"
+	}
+]

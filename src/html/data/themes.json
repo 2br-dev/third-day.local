@@ -1,0 +1,32 @@
+[
+	{
+		"image": "/img/themes/future_image.jpg",
+		"description": "Осмысление образа будущего с позиции достаточной общей теории управления обществом",
+		"class": "col xl6 l12 m6 s12"
+	},
+	{
+		"image": "/img/themes/religion_basis.jpg",
+		"description": "Фундаментальное осмысление религиозно-духовных основ капитализма",
+		"class": "col xl6 l12 m6 s12"
+	},
+	{
+		"image": "/img/themes/strategic_planning.jpg",
+		"description": "Стратегическое планирование в постиндустриальном мире",
+		"class": "col xl6 l12 m6 s12"
+	},
+	{
+		"image": "/img/themes/self_construct.jpg",
+		"description": "Принципы построения себя как личности",
+		"class": "col xl6 l12 m6 s12"
+	},
+	{
+		"image": "/img/themes/cooperation_company.jpg",
+		"description": "Принципы построения кооперации на уровне компании и отрасли",
+		"class": "col xl6 l12 m6 s12"
+	},
+	{
+		"image": "/img/themes/cooperation_country.jpg",
+		"description": "Принципы построения хозяйственной деятельности на уровне страны",
+		"class": "col xl6 l12 m6 s12"
+	}
+]

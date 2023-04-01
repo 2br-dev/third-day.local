@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+body{
+	font-family: 'Inter';
+	font-weight: 300;
+	line-height: 1.4em;
+	font-size: $font-size;
+
+	& h1{
+		font-size: calc(1.6rem + 1.2vmax);
+		line-height: 1.2em;
+	}
+
+	& h2{
+		font-size: calc(1.4rem + .4vmax);
+		line-height: 1.2em;
+	}
+
+	& .pseudo-h1{
+		@extend h1;
+	}
+
+	& .pseudo-h2{
+		@extend h2;
+	}
+}

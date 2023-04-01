@@ -1,0 +1,140 @@
+body{
+
+	& strong{
+		font-weight: 600;
+	}
+
+	& *:focus {
+		outline: none;
+	}
+
+	& .bttn{
+		font-size: calc(16px + .2vmax);
+		padding: 12px 25px;
+		background-color: $primary;
+		border-radius: $border-radius-small;
+		color: #fff;
+		transition: background-color .2s;
+		display: inline-block;
+		border: 0;
+
+		&:hover{
+			background-color: $primary-light;
+		}
+	}
+
+	& .bttn-white{
+		@extend .bttn;
+		background-color: #fff;
+		color: $primary;
+
+		&:hover{
+			background-color: $primary;
+			color: #fff;
+		}
+	}
+
+	& section{
+		padding: 4vmax 0;
+
+		@media(max-width: $medium){
+			padding: 30px 0;
+		}
+	}
+
+	& .round-l{
+		border-radius: $border-radius-large;
+	}
+
+	& .round-m{
+		border-radius: $border-radius-med;
+	}
+
+	& .round-s{
+		border-radius: $border-radius-small;
+	}
+
+	& .input-field{
+
+		margin-bottom: 10px;
+
+		& input[type=text],
+		& input[type=email],
+		& input[type=tel]
+		{
+			border: 0;
+			width: 100%;
+			border-radius: $border-radius-small;
+			font-size: 1.2rem;
+			line-height: 2em;
+			font-family: 'Inter';
+			font-weight: 300;
+			padding: 6px 20px;
+			box-shadow: 0 2px 6px rgba(black, .4) inset;
+
+			&::placeholder{
+				color: #C0C0C0;
+			}
+		}
+
+		& input[type=checkbox]{
+			position: absolute;
+			z-index: -1;
+			& ~ label{
+				display: flex;
+				user-select: none;
+				cursor: pointer;
+
+				&:before{
+					content: '\F0131';
+					font-family: 'Material Design Icons';
+					margin-right: 6px;
+					font-size: 1.2rem;
+				}
+			}
+
+			&:checked ~label:before{
+				content: '\F0135';
+			}
+		}
+	}
+
+	& .image-entry{
+		display: flex;
+		align-items: center;
+		margin-bottom: 1.5rem;
+
+		& img{
+			width: 128px;
+			height: auto;
+			border-radius: $border-radius-small;
+			margin-right: 20px;
+		}
+
+		& .title{
+			font-weight: 600;
+			font-size: 1.2rem;
+		}
+
+		@media(max-width: $extra-small){
+			flex-direction: column;
+			text-align: center;
+
+			& img{
+				margin: 0;
+			}
+		}
+	}
+
+	& .pin{
+		position: sticky;
+		top: 40px;
+	}
+
+	& .modal{
+
+		& .modal-footer{
+			text-align: center;
+		}
+	}
+}
