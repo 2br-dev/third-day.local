@@ -1,5 +1,5 @@
 import Lazy from 'vanilla-lazyload';
-import M from 'materialize-css';
+import * as M from 'materialize-css';
 
 let lazy = new Lazy(undefined, document.querySelectorAll('.lazy'));
 let modal = M.Modal.init(document.querySelectorAll('.modal'));
@@ -34,9 +34,10 @@ function setupTimeline()
 			$(el).removeClass('shown');
 		}
 
-		let count = $('.shown').length;
-
-		$('.shown').removeClass('last');
-		(<HTMLDivElement>$('.shown').get(count - 1)).classList.add('last');
+		if($('.shown').length){
+			let count = $('.shown').length;
+			$('.shown').removeClass('last');
+			(<HTMLDivElement>$('.shown').get(count - 1)).classList.add('last');
+		}
 	});
 }
