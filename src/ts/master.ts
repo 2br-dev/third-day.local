@@ -8,6 +8,18 @@ $(window).on('scroll', (e:JQuery.ScrollEvent) => {
 	setupTimeline();
 });
 
+$('body').on('click', '.scroll-link', (e:JQuery.ClickEvent) => {
+	e.preventDefault();
+
+	let el = e.currentTarget;
+	let hash = $(el).attr('href')?.substring(1);
+	let top = $('#'+hash).offset()?.top;
+	
+	$('html, body').animate({
+		scrollTop: top
+	}, 400);
+})
+
 function setupTimeline()
 {
 	let windowHeight = window.innerHeight;

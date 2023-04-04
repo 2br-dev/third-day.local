@@ -26,6 +26,15 @@ body{
 					backdrop-filter: blur(3px);
 				}
 
+				& .large-text{
+					display: block;
+					margin: 1vmax 0;
+					font-size: 1.5rem;
+					border-top: 1px solid #fff;
+					width: fit-content;
+					padding-top: 10px;
+				}
+
 				&:after{
 					@extend:before;
 					background-color: transparent;
@@ -280,65 +289,67 @@ body{
 					position: relative;
 					z-index: 2;
 
-					& .person{
+				}
 
-						border-radius: $border-radius-med;
+				& .person{
+
+					border-radius: $border-radius-med;
+					overflow: hidden;
+					margin-bottom: 1rem;
+					@include shadow;
+
+					& .photo{
+						aspect-ratio: 3 / 3.6;
+						background-position: top center;
+						background-size: cover;
+						position: relative;
 						overflow: hidden;
-						margin-bottom: 1rem;
-						@include shadow;
+						transition: filter .4s;
+
+						& .regalies{
+							font-size: 14px;
+							padding: 10px;
+							position: absolute;
+							width: 100%;;
+							box-sizing: border-box;
+							bottom: 0;
+							background: rgba(black, .5);
+							backdrop-filter: blur(5px);
+							transition: bottom .4s, opacity .4s;
+							bottom: -50%;
+							opacity: 0;
+							pointer-events: none;
+							line-height: 1.2em;
+						}
+					}
+
+					& .name{
+
+						background: #fff;
+						color: $text;
+						padding: 20px;
+
+						& .last-name{
+							font-size: 1.2rem;
+							text-transform: uppercase;
+							font-weight: 600;
+						}
+
+						& .first-n-middle{
+							font-weight: 600;
+							font-size: 16px;
+						}
+					}
+
+					&:hover{
 
 						& .photo{
-							aspect-ratio: 3 / 3.6;
-							background-position: top center;
-							background-size: cover;
-							position: relative;
-							overflow: hidden;
-							transition: filter .4s;
+							filter: grayscale(1);
 
 							& .regalies{
-								font-size: 14px;
-								padding: 10px;
-								position: absolute;
-								width: 100%;;
-								box-sizing: border-box;
 								bottom: 0;
-								background: rgba(black, .5);
-								backdrop-filter: blur(5px);
-								transition: bottom .4s, opacity .4s;
-								bottom: -50%;
-								opacity: 0;
-								pointer-events: none;
-								line-height: 1.2em;
-							}
-						}
-
-						& .name{
-
-							background: #fff;
-							color: $text;
-							padding: 20px;
-
-							& .last-name{
-								font-size: 1.2rem;
-								text-transform: uppercase;
-								font-weight: 600;
-							}
-
-							& .first-n-middle{
-								font-weight: 600;
-							}
-						}
-
-						&:hover{
-
-							& .photo{
-								filter: grayscale(1);
-
-								& .regalies{
-									bottom: 0;
-									opacity: 1;
-									pointer-events: all;
-								}
+								opacity: 1;
+								pointer-events: all;
 							}
 						}
 					}
@@ -490,6 +501,14 @@ body{
 				& label{
 					display: inline-block;
 					margin: 20px 0;
+				}
+
+				& h2{
+					margin: 0;
+				}
+
+				& form{
+					margin-top: 1vmax;
 				}
 			}
 		}

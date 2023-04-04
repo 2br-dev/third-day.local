@@ -4680,6 +4680,14 @@ body main section#hero {
     height: 100%;
     -webkit-backdrop-filter: blur(3px);
             backdrop-filter: blur(3px); }
+  body main section#hero .large-text {
+    display: block;
+    margin: 1vmax 0;
+    font-size: 1.5rem;
+    border-top: 1px solid #fff;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-top: 10px; }
   body main section#hero:after {
     background-color: transparent;
     background-image: url(../img/arrows.svg);
@@ -4849,49 +4857,50 @@ body main section#speakers {
   body main section#speakers .container {
     position: relative;
     z-index: 2; }
-    body main section#speakers .container .person {
-      border-radius: 10px;
+  body main section#speakers .person {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.1), 0 3px 9px rgba(0, 0, 0, 0.1); }
+    body main section#speakers .person .photo {
+      aspect-ratio: 3 / 3.6;
+      background-position: top center;
+      background-size: cover;
+      position: relative;
       overflow: hidden;
-      margin-bottom: 1rem;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.1), 0 3px 9px rgba(0, 0, 0, 0.1); }
-      body main section#speakers .container .person .photo {
-        aspect-ratio: 3 / 3.6;
-        background-position: top center;
-        background-size: cover;
-        position: relative;
-        overflow: hidden;
-        transition: filter .4s; }
-        body main section#speakers .container .person .photo .regalies {
-          font-size: 14px;
-          padding: 10px;
-          position: absolute;
-          width: 100%;
-          box-sizing: border-box;
-          bottom: 0;
-          background: rgba(0, 0, 0, 0.5);
-          -webkit-backdrop-filter: blur(5px);
-                  backdrop-filter: blur(5px);
-          transition: bottom .4s, opacity .4s;
-          bottom: -50%;
-          opacity: 0;
-          pointer-events: none;
-          line-height: 1.2em; }
-      body main section#speakers .container .person .name {
-        background: #fff;
-        color: #111111;
-        padding: 20px; }
-        body main section#speakers .container .person .name .last-name {
-          font-size: 1.2rem;
-          text-transform: uppercase;
-          font-weight: 600; }
-        body main section#speakers .container .person .name .first-n-middle {
-          font-weight: 600; }
-      body main section#speakers .container .person:hover .photo {
-        filter: grayscale(1); }
-        body main section#speakers .container .person:hover .photo .regalies {
-          bottom: 0;
-          opacity: 1;
-          pointer-events: all; }
+      transition: filter .4s; }
+      body main section#speakers .person .photo .regalies {
+        font-size: 14px;
+        padding: 10px;
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        -webkit-backdrop-filter: blur(5px);
+                backdrop-filter: blur(5px);
+        transition: bottom .4s, opacity .4s;
+        bottom: -50%;
+        opacity: 0;
+        pointer-events: none;
+        line-height: 1.2em; }
+    body main section#speakers .person .name {
+      background: #fff;
+      color: #111111;
+      padding: 20px; }
+      body main section#speakers .person .name .last-name {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: 600; }
+      body main section#speakers .person .name .first-n-middle {
+        font-weight: 600;
+        font-size: 16px; }
+    body main section#speakers .person:hover .photo {
+      filter: grayscale(1); }
+      body main section#speakers .person:hover .photo .regalies {
+        bottom: 0;
+        opacity: 1;
+        pointer-events: all; }
 
 body main section#areas .image {
   width: 100%;
@@ -4990,6 +4999,10 @@ body main section#form-bottom {
   body main section#form-bottom label {
     display: inline-block;
     margin: 20px 0; }
+  body main section#form-bottom h2, body main section#form-bottom .pseudo-h2 {
+    margin: 0; }
+  body main section#form-bottom form {
+    margin-top: 1vmax; }
 
 body footer {
   padding: 20px 0; }
