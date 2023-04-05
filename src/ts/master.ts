@@ -8,6 +8,65 @@ $(window).on('scroll', (e:JQuery.ScrollEvent) => {
 	setupTimeline();
 });
 
+if ($('#round-l-send').length) {
+    $('body').on('click', '#round-l-send', sendMessage);
+}
+
+if ($('#bottom-form').length) {
+    $('body').on('click', '#bottom-form', sendMessage);
+}
+
+$('form').find('input').each(function(){
+    $(this).on('click', function () {
+        $(this).removeClass('error');
+    })
+});
+
+
+function sendMessage(e) {
+    e.preventDefault();
+    var error = false;
+    var form = $(this).parents('form');
+    form.find('input').each(function(){
+        if($(this).prop('required') && $(this).val() == ''){
+            $(this).addClass('error');
+            error = true;
+        }
+    });
+
+    if(!error){
+        var formData = $(form).serialize();
+        $.ajax({
+            url: '/ajax.php',
+            type: "POST",
+            dataType: 'JSON',
+            data: formData,
+            success: function success(res) {
+                if (res.success) {
+                    M.toast({
+                        html: "Заявка успешно отправлена!"
+                    });
+                    form[0].reset();
+                } else {
+                    M.toast({
+                        html: "Не заполнены все обязательные поля"
+                    });
+                }
+            },
+            error: function error(err) {
+                M.toast({
+                    html: "Произошла ошибка. Попробуйет еще раз"
+                });
+                console.error(err);
+            }
+        });
+    }else{
+        M.toast({
+            html: "Не заполнены все обязательные поля"
+        });
+    }
+}
+
 $('body').on('click', '.scroll-link', (e:JQuery.ClickEvent) => {
 	e.preventDefault();
 

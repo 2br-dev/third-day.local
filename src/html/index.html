@@ -87,15 +87,15 @@
 							<h2>Заявка на участие</h2>
 							<strong>Вход свободный, регистрация обязательна</strong>
 							<div class="inputs">
-								<div class="row">
-									<div class="col l12 m6 s12"><div class="input-field"><input required  type="text" placeholder="Фамилия*"></div></div>
-									<div class="col l12 m6 s12"><div class="input-field"><input required  type="text" placeholder="Имя*"></div></div>
-									<div class="col l12 m6 s12"><div class="input-field"><input required  type="text" placeholder="Отчество*"></div></div>
-									<div class="col l12 m6 s12"><div class="input-field"><input type="tel" placeholder="Телефон"></div></div>
-									<div class="col l12 m6 s12 offset-m3"><div class="input-field"><input required  type="email" placeholder="E-mail*"></div></div>
-								</div>
+                                <div class="row">
+                                    <div class="col l12 m6 s12"><div class="input-field"><input name="surname" required  type="text" placeholder="Фамилия*"></div></div>
+                                    <div class="col l12 m6 s12"><div class="input-field"><input name="name" required  type="text" placeholder="Имя*"></div></div>
+                                    <div class="col l12 m6 s12"><div class="input-field"><input name="midname" required  type="text" placeholder="Отчество*"></div></div>
+                                    <div class="col l12 m6 s12"><div class="input-field"><input name="phone" type="tel" placeholder="Телефон"></div></div>
+                                    <div class="col l12 m6 s12 offset-m3"><div class="input-field"><input name="email" required  type="email" placeholder="E-mail*"></div></div>
+                                </div>
 								<div class="action">
-									<a href="" class="bttn-white">Отправить</a>
+									<a id="round-l-send" class="bttn-white">Отправить</a>
 								</div>
 								<div class="input-field">
 									<input type="checkbox" id="agree-top" required>
@@ -258,23 +258,23 @@
 				</div>
 				<form action="" class="row">
 					<div class="col xl2 offset-xl1 l4 m6 s6 xs12">
-						<div class="input-field"><input type="text" placeholder="Фамилия*"></div>
+						<div class="input-field"><input name="surname" required type="text" placeholder="Фамилия*"></div>
 					</div>
 					<div class="col xl2 l4 m6 s6 xs12">
-						<div class="input-field"><input type="text" placeholder="Имя*"></div>
+						<div class="input-field"><input name="name" required type="text" placeholder="Имя*"></div>
 					</div>
 					<div class="col xl2 l4 m6 s6 xs12">
-						<div class="input-field"><input type="text" placeholder="Отчество*"></div>
+						<div class="input-field"><input name="midname" required type="text" placeholder="Отчество*"></div>
 					</div>
 					<div class="col xl2 l4 m6 s6 xs12 offset-l2">
-						<div class="input-field"><input type="text" placeholder="Телефон"></div>
+						<div class="input-field"><input name="phone" type="text" placeholder="Телефон"></div>
 					</div>
 					<div class="col xl2 l4 m6 offset-m3 s6 offset-s3 xs12">
-						<div class="input-field"><input type="text" placeholder="E-mail*"></div>
+						<div class="input-field"><input name="email" required type="text" placeholder="E-mail*"></div>
 					</div>
 					<div class="col l8 offset-l2 center-align">
 						<div class="input-field"><input type="checkbox" id="agree-bottom"><label for="agree-bottom" id="agree-bottom">Даю согласие СРОО «Берегиня» (ИНН 9203540449) на обработку персональных данных, в соответствии с Федеральным законом № 152-ФЗ «О персональных данных» от 27.07.2006 с целью участия в работе Форума</label></div>
-						<a href="" class="bttn-white">Отправить</a>
+						<a id="bottom-form" class="bttn-white">Отправить</a>
 					</div>
 				</form>
 			</div>
