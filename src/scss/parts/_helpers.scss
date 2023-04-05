@@ -4,8 +4,9 @@ body{
       border: 2px solid red !important;
     }
 
-	& .hcenter{
-		// justify-content: center;
+	& .disabled{
+		pointer-events: none;
+		filter: grayscale(1);
 	}
 
 	& strong{
@@ -25,6 +26,7 @@ body{
 		transition: background-color .2s;
 		display: inline-block;
 		border: 0;
+		user-select: none;
 
 		&:hover{
 			background-color: $primary-light;

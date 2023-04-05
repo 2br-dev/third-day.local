@@ -4610,6 +4610,10 @@ body {
 body .error {
   border: 2px solid red !important; }
 
+body .disabled {
+  pointer-events: none;
+  filter: grayscale(1); }
+
 body strong {
   font-weight: 600; }
 
@@ -4624,7 +4628,10 @@ body .bttn, body .bttn-white {
   color: #fff;
   transition: background-color .2s;
   display: inline-block;
-  border: 0; }
+  border: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none; }
   body .bttn:hover, body .bttn-white:hover {
     background-color: #F49308; }
 
@@ -4841,24 +4848,24 @@ body main section#hero {
           body main section#hero .patrons ul li {
             margin: 6px 0; } }
 
-body main section#form-top .location {
+body main section#form-top-section .location {
   font-weight: 600;
   font-size: 1.3rem;
   line-height: 1.4em; }
 
-body main section#form-top form {
+body main section#form-top-section form {
   background: linear-gradient(to bottom, #0084CA, #00A7DA);
   color: #fff;
   padding: 2.5vmax; }
-  body main section#form-top form h2, body main section#form-top form .pseudo-h2 {
+  body main section#form-top-section form h2, body main section#form-top-section form .pseudo-h2 {
     margin: 0; }
-  body main section#form-top form .inputs {
+  body main section#form-top-section form .inputs {
     margin-top: 30px; }
-  body main section#form-top form .action {
+  body main section#form-top-section form .action {
     text-align: center;
     margin: 30px 0; }
   @media (max-width: 800px) {
-    body main section#form-top form {
+    body main section#form-top-section form {
       padding: 5vmax; } }
 
 body main section#intro {
